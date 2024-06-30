@@ -1,20 +1,25 @@
 .trailing.clear {
-    cursor: pointer;
-  
-    &:focus {
-      color: #3b71ca;
-      outline: none;
-    }
-  }
+  cursor: pointer;
 
-  .is-invalid {
-    border-color: red;
+  &:focus {
+    color: #3b71ca;
+    outline: none;
   }
-  
-  .invalid-feedback {
-    color: red;
-  }
+}
 
-  .input-group {
-    margin-top: 2rem;
-  }
+.is-invalid {
+  border-color: red;
+}
+
+.invalid-feedback {
+  color: red;
+}
+
+.input-group {
+  margin-top: 2rem;
+}
+
+.login-btn {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
