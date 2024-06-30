@@ -1,0 +1,134 @@
+<section class="vh-100 d-flex items-center justify-center">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img
+          src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+          class="img-fluid"
+          alt="Sample image"
+        />
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <div
+          class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start"
+        >
+          <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+          <button
+            type="button"
+            data-mdb-button-init
+            data-mdb-ripple-init
+            title="facebook"
+            class="btn btn-primary btn-floating mx-1 d-flex"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </button>
+
+          <button
+            type="button"
+            data-mdb-button-init
+            data-mdb-ripple-init
+            title="twitter"
+            class="btn btn-primary btn-floating mx-1 d-flex"
+          >
+            <i class="fab fa-twitter"></i>
+          </button>
+
+          <button
+            type="button"
+            data-mdb-button-init
+            data-mdb-ripple-init
+            title="linkedin"
+            class="btn btn-primary btn-floating mx-1 d-flex"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </button>
+        </div>
+
+        <div class="divider d-flex align-items-center my-4">
+          <p class="text-center fw-bold mx-3 mb-0">Or</p>
+        </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">&#64;</span>
+            <input
+              type="email"
+              class="form-control"
+              name="emailId"
+              [class.is-invalid]="
+                loginForm.controls['emailId'].touched &&
+                !loginForm.controls['emailId'].valid
+              "
+              formControlName="emailId"
+              placeholder="Email"
+              aria-label="Email"
+              aria-describedby="basic-addon1"
+              required
+            />
+            @if (loginForm.controls['emailId'].touched &&
+            !loginForm.controls['emailId'].valid) {
+            <div class="invalid-feedback">
+              Email id is required and must be a valid email.
+            </div>
+            }
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon2"
+              ><i class="fa fa-key"></i
+            ></span>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              [class.is-invalid]="
+                loginForm.controls['password'].touched &&
+                !loginForm.controls['password'].valid
+              "
+              formControlName="password"
+              placeholder="Password"
+              aria-label="Password"
+              aria-describedby="basic-addon2"
+            />
+            @if (loginForm.controls['password'].touched &&
+            !loginForm.controls['password'].valid) {
+            <div class="invalid-feedback">Password is required.</div>
+            }
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            <div class="form-check mb-0">
+              <input
+                class="form-check-input me-2"
+                type="checkbox"
+                value=""
+                id="form2Example3"
+              />
+              <label class="form-check-label" for="form2Example3">
+                Remember me
+              </label>
+            </div>
+            <a href="#!" class="text-body">Forgot password?</a>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button
+              type="submit"
+              data-mdb-button-init
+              data-mdb-ripple-init
+              title="login"
+              class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem"
+            >
+              Login
+            </button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">
+              Don't have an account?
+              <a href="#!" class="link-danger">Register</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

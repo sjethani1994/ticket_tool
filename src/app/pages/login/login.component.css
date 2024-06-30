@@ -1,0 +1,20 @@
+.trailing.clear {
+    cursor: pointer;
+  
+    &:focus {
+      color: #3b71ca;
+      outline: none;
+    }
+  }
+
+  .is-invalid {
+    border-color: red;
+  }
+  
+  .invalid-feedback {
+    color: red;
+  }
+
+  .input-group {
+    margin-top: 2rem;
+  }
